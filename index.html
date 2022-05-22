@@ -240,7 +240,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-calendar"></i></span>
 								</div>
-								<input type="text" name="ngaylam" id="datepicker" class="form-control"
+								<input id="ngaylam" type="date" name="ngaylam" id="datepicker" class="form-control"
 									placeholder="Ngày làm">
 							</div>
 
@@ -264,9 +264,9 @@
 								</div>
 								<select class="form-control" id="chucvu">
 									<option>Chọn chức vụ</option>
-									<option>Sếp</option>
-									<option>Trưởng phòng</option>
-									<option>Nhân viên</option>
+									<option value="sep">Sếp</option>
+									<option value="truongphong">Trưởng phòng</option>
+									<option value="nhanvien">Nhân viên</option>
 								</select>
 							</div>
 
@@ -289,7 +289,7 @@
 				<!-- Modal footer -->
 				<div class="modal-footer" id="modal-footer">
 					<button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
-					<button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
+					<button id="btnCapNhat" type="button" class="btn btn-success" style="display: none;" data-dismiss="modal">Cập nhật</button>
 					<button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 				</div>
 
@@ -308,7 +308,11 @@
 	<script src="./js/jquery-ui.js"></script>
 	<script src="js/datepicker.js"></script>
 	<!-- js -->
-
+	<script src="./js/nhanvien.js"></script>
+	<script src="./js/dsnv.js"></script>
+	<script src="./js/validator.js"></script>
+	<script src="./js/main.js"></script>
+	
 	<!-- Wow -->
 	<!-- <script src="js/wow.min.js"></script>	
 	<script>
