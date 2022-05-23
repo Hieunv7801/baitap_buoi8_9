@@ -6,7 +6,7 @@ getLocalStorage();
 function getEle(id) {
     return document.getElementById(id);
 }
-function layThongTinNV() {
+function layThongTinNV(isAdd) {
     var _taiKhoan = getEle("tknv").value;
     var _name = getEle("name").value;
     var _email = getEle("email").value;
@@ -20,10 +20,12 @@ function layThongTinNV() {
     var isValid = true;
 
     //! Check Validator
+    if(isAdd){
     //Ma NV
     isValid &= validator.KiemTRaRong(_taiKhoan, "tbTKNV", "(*) Vui lòng nhập tài khoản") &&
         validator.kiemTraLenghtKiTu(_taiKhoan, "tbTKNV", 3, 7, "(*) Vui lòng nhập 3-7 kí tự") && 
         validator.KiemTraTaiKhoanTonTai(_taiKhoan, "tbTKNV", "(*) Tài khoản đã tồn tại", dsnv.arr);
+    }
     // Ten Nv
     isValid &= validator.KiemTRaRong(_name, "tbTen", "(*) Vui lòng nhập tên") &&
         validator.kiemTraChuoiKiTu(_name, "tbTen", "(*) Sai định dạng tên");
